@@ -1,100 +1,86 @@
-import React, { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+/*
+    ID: IM100
+    작성자: 김영훈
+    작성일: 2024.03.20
+    기능: 자기소개 페이지 부모 컴포넌트
+    버전: V0.5
+    버전 이력: V0.5
+*/
+
+import React, { useState, useRef, useEffect } from "react"; // React, React Hook 사용
+import gsap from "gsap"; // gsap 애니메이션 라이브러리 사용
+import Intro from "../../components/Home/Intro";
+import IntroduceMe from "../../components/Home/IntroduceMe";
+import Personality from "../../components/Home/Personality";
+import Advantage from "../../components/Home/Advatage";
+import ThankYou from "../../components/Home/ThankYou";
 
 const Home = () => {
-    const container = useRef();
-    const circle = useRef();
+    const introRef = useRef(null); // 인트로 Ref
+    const personalityRef = useRef(null); // 간단소개 Ref
+    const introduceMeRef = useRef(null); // 나의 설명 Ref
+    const advantageRef = useRef(null); // 경력, 학력 Ref
+    const thankYouRef = useRef(null); // 감사 인사말 Ref
 
-    useGSAP(
-        () => {
-            // use selectors...
-            // or refs...
-        },
-        { scope: container }
-    ); //
+    // 각 섹션의 애니메이션 실행 여부를 관리하는 상태
+    const [animationState, setAnimationState] = useState({
+        intro: false,
+        personality: false,
+        introduceMe: false,
+        advantage: false,
+        thankYou: false,
+    });
+
+    useEffect(() => {
+        /**
+         * @param {useRef} : Ref 데이터
+         * @param {String} : 현재 section 데이터
+         */
+        const checkAndAnimate = (ref, section) => {
+            // 현재 섹션에서 애니메이션 실행 여부 판단
+            if (ref.current && !animationState[section]) {
+                const top = ref.current.getBoundingClientRect().top; // 화면의 최상단 위치
+
+                // 섹션의 최상단위치가 현재 스크롤 위치 * 높이 * 0.8 보다 작으면 로직 실행
+                if (
+                    top + window.scrollY <
+                    window.scrollY + window.innerHeight * 0.8
+                ) {
+                    // gsap 애니메이션 실행
+                    gsap.fromTo(
+                        ref.current,
+                        { opacity: 0, y: -50 },
+                        { opacity: 1, y: 0, duration: 2 }
+                    );
+                    setAnimationState((prev) => ({ ...prev, [section]: true })); // 섹션의 애니메이션 여부 변경
+                }
+            }
+        };
+
+        // 스크롤시 발생하는 이벤트
+        const handleScroll = () => {
+            checkAndAnimate(introRef, "intro");
+            checkAndAnimate(introduceMeRef, "introduceMe");
+            checkAndAnimate(personalityRef, "personality");
+            checkAndAnimate(advantageRef, "advantage");
+            checkAndAnimate(thankYouRef, "thankYou");
+        };
+
+        window.addEventListener("scroll", handleScroll); // 스크롤 이벤트 확인
+        handleScroll(); // 컴포넌트 마운트 시에도 위치 확인(리로드시 해당 섹션의 애니메이션 실행)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [animationState]); // 의존성 배열에 animationState 추가
 
     return (
-        <div className="flex flex-col" ref={container}>
-            <div className="flex justify-center items-center border w-full h-screen box">
-                <h1 className="text-6xl font-bold ">
-                    <span>어서오세요.</span> <br />
-                    김영훈 자기소개 페이지입니다.
-                </h1>
-            </div>
-            <div className="flex flex-col justify-center items-center border w-full h-screen box">
-                <span className="text-3xl">
-                    안녕하세요.
-                    <br /> 현재 Soynet에 재직중인 주니어 디벨롭 김영훈 입니다.
-                </span>
-            </div>
-            <div className="flex justify-center items-center border w-full h-screen box">
-                <div className="m-12 p-8 min-h-96 border">
-                    <span>나의 장점</span>
-                    <li>Soynet - 2021.02.15 ~ </li>
-                    <li>
-                        주요 업무
-                        <li>
-                            SoyNatrue - 2023. 11 ~ 진행형
-                            <li>DevOps 시스템 개발 총 담당 및 운영</li>
-                        </li>
-                        <li>
-                            SoyMarket - 2022. 04 ~ 진행형
-                            <li>
-                                Soynet MarketPlace 프로젝트 페이지 운영 및 기능
-                                개선
-                            </li>
-                        </li>
-                        <li>
-                            SoyStudy - 2023. 11 ~ 진행형
-                            <li>Soynet Untact CBT 프로젝트 homepage 담당</li>
-                        </li>
-                    </li>
-                </div>
-                <div className="m-12 p-8 min-h-96 border">
-                    <span>나의 단점</span>
-                    <li>
-                        한국폴리텍 I 대학 성남캠퍼스(전자정보통신과) - 2021.03.
-                        ~ 2023.02
-                    </li>
-                    <li>삼일상업고등학교(IT경영과) - 2018.03. ~ 2021.02</li>
-                </div>
-            </div>
-            <div className="flex flex-row justify-center items-center border w-full h-screen box">
-                <div className="m-12 p-8 min-h-96 border">
-                    <span>경력</span>
-                    <li>Soynet - 2021.02.15 ~ </li>
-                    <li>
-                        주요 업무
-                        <li>
-                            SoyNatrue - 2023. 11 ~ 진행형
-                            <li>DevOps 시스템 개발 총 담당 및 운영</li>
-                        </li>
-                        <li>
-                            SoyMarket - 2022. 04 ~ 진행형
-                            <li>
-                                Soynet MarketPlace 프로젝트 페이지 운영 및 기능
-                                개선
-                            </li>
-                        </li>
-                        <li>
-                            SoyStudy - 2023. 11 ~ 진행형
-                            <li>Soynet Untact CBT 프로젝트 homepage 담당</li>
-                        </li>
-                    </li>
-                </div>
-                <div className="m-12 p-8 min-h-96 border">
-                    <span>학력</span>
-                    <li>
-                        한국폴리텍 I 대학 성남캠퍼스(전자정보통신과) - 2021.03.
-                        ~ 2023.02
-                    </li>
-                    <li>삼일상업고등학교(IT경영과) - 2018.03. ~ 2021.02</li>
-                </div>
-            </div>
-            <div className="flex flex-col items-center border w-full h-screen box">
-                <span></span>
-            </div>
+        <div className="bg-gray-100">
+            <Intro props={{ introRef }} />
+            <IntroduceMe props={{ introduceMeRef }} />
+            <Personality props={{ personalityRef }} />
+            <Advantage props={{ advantageRef }} />
+            <ThankYou props={{ thankYouRef }} />
         </div>
     );
 };
