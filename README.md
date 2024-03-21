@@ -1,8 +1,27 @@
-# React + Vite
+# IntroduceMe 🌟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+자기소개 프로젝트 입니다.
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 시작하기
+
+김영훈의 대해서 알고싶다면, 사이트를 방문해 보세요:
+
+🌐 [IntroduceMe 라이브](https://introduce-me-n7xr.vercel.app/)
+
+<br>
+
+## 🛠 사용된 기술
+
+- **Vite + React:** 빠른 개발과 성능을 위한 최신 조합입니다.
+- **GSAP:** 페이지를 생동감 있게 만드는 부드럽고 전문적인 애니메이션을 위해 사용됩니다.
+- **Tailwind CSS:** 유틸리티 우선의 CSS 프레임워크로 빠른 UI 개발을 가능하게 합니다.
+
+<br>
+
+## 📌 버전 관리
+
+**버전 0.5** - 기본 구조 및 컴포넌트 분할이 완료되었습니다. 이는 향후 개선 및 개인화를 위한 기반을 마련합니다.
+
+*IntroduceMe*와 함께 여정을 시작하고 진정으로 여러분을 대표하는 공간을 만들어 보세요.
