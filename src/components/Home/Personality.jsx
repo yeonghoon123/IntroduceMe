@@ -30,7 +30,7 @@ const Personality = ({ props }) => {
                             <li>도전적이다.</li>
                             <li>꼼꼼하다.</li>
                         </ul>
-                        <Link to={"/details"} className="mt-auto">
+                        <Link to={"/details"} className="md:mt-auto mt-8">
                             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 자세히 보기
                             </button>
@@ -52,7 +52,7 @@ const Personality = ({ props }) => {
                                 DataBase: MySQL, PostgreSQL, Firebase, DynamoDB
                             </li>
                         </ul>
-                        <Link to={"/details"} className="mt-auto">
+                        <Link to={"/details"} className="md:mt-auto mt-8">
                             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 자세히 보기
                             </button>

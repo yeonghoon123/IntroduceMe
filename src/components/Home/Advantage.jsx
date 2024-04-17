@@ -52,7 +52,7 @@ const Advantage = ({ props }) => {
                                 </p>
                             </div>
                         </div>
-                        <Link to={"/details"} className="mt-auto">
+                        <Link to={"/details"} className="md:mt-auto mt-8">
                             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 자세히 보기
                             </button>
@@ -72,7 +72,7 @@ const Advantage = ({ props }) => {
                                 삼일상업고등학교(IT경영과) - 2018.03. ~ 2021.02
                             </li>
                         </ul>
-                        <Link to={"/details"} className="mt-auto">
+                        <Link to={"/details"} className="md:mt-auto mt-8">
                             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 자세히 보기
                             </button>
