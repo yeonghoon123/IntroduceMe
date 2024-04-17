@@ -17,7 +17,7 @@ const ThankYou = ({ props }) => {
                 ref={thankYouRef}
             >
                 <span className="text-center text-xl">
-                    여러분의 관심과 지원에 감사드립니다.
+                    여러분의 관심에 감사드립니다.
                 </span>
             </div>
         </>
