@@ -45,12 +45,14 @@ const Personality = ({ props }) => {
                             <li>Frontend: React, NextJs, VueJs</li>
                             <li>Backend: NodeJs</li>
                             <li>
-                                CloudService: AWS EC2, Route53, API Gateway,
-                                Lambda
+                                Cloud
+                                <br />
+                                AWS - EC2. Route53. S3, API Gateway, Lambda,
+                                dynamodb,cloudFront
+                                <br />
+                                Google - firebase
                             </li>
-                            <li>
-                                DataBase: MySQL, PostgreSQL, Firebase, DynamoDB
-                            </li>
+                            <li>DBMS: MySQL, PostgreSQL</li>
                         </ul>
                         <Link to={"/details"} className="md:mt-auto mt-8">
                             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">

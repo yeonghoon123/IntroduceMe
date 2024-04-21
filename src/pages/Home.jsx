@@ -9,11 +9,11 @@
 
 import React, { useState, useRef, useEffect } from "react"; // React, React Hook 사용
 import gsap from "gsap"; // gsap 애니메이션 라이브러리 사용
-import Intro from "../../components/Home/Intro";
-import IntroduceMe from "../../components/Home/IntroduceMe";
-import Personality from "../../components/Home/Personality";
-import Advantage from "../../components/Home/Advantage";
-import ThankYou from "../../components/Home/ThankYou";
+import Intro from "../components/Home/Intro";
+import IntroduceMe from "../components/Home/IntroduceMe";
+import Personality from "../components/Home/Personality";
+import Advantage from "../components/Home/Advantage";
+import ThankYou from "../components/Home/ThankYou";
 
 const Home = () => {
     const introRef = useRef(null); // 인트로 Ref
