@@ -3,6 +3,7 @@ import Strengths from "../../components/Details/Strengths";
 import Skillset from "../../components/Details/Skillset";
 import Carrer from "../../components/Details/Career";
 import DetailBar from "../../components/Details/DetailBar";
+import Education from "../../components/Details/Education";
 
 export default function Details() {
     const [page, setPage] = useState("Strengths");
@@ -26,6 +27,7 @@ export default function Details() {
                         {page === "Strengths" && <Strengths />}
                         {page === "SkillSet" && <Skillset />}
                         {page === "Career" && <Carrer />}
+                        {page === "Education" && <Education />}
                         {/* 다른 페이지 ('Profile', 'SkillSet', 'Career', 'Education') 내용도 유사하게 추가할 수 있습니다. */}
                     </div>
                 </div>
