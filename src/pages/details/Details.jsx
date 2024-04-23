@@ -20,7 +20,7 @@ export default function Details() {
         <>
             <div className="flex justify-center bg-slate-300 min-h-screen p-4 sm:p-8 lg:p-32">
                 <div className="flex flex-col justify-center w-full sm:w-4/5 md:w-4/5 lg:w-3/5">
-                    <div className="flex flex-row  space-x-1 overflow-x-auto">
+                    <div className="flex flex-row  space-x-1 overflow-x-auto scrollbar-hide">
                         <DetailBar props={{ pageLabel, page, setPage }} />
                     </div>
                     <div className="bg-white rounded-b-xl shadow-md p-4 sm:p-6 md:p-6 w-full">
