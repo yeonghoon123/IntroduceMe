@@ -1,24 +1,40 @@
-import { profileData } from "../../constants/details/Profile";
+import { profileData, portfolioData } from "../../constants/details/Profile";
 
 // 사진과 개인 정보를 표시하는 헤더 컴포넌트
 const Header = () => {
     return (
-        <div className="flex flex-col md:flex-row justify-between items-center bg-white p-4 text-gray-800">
-            <div className="w-[128px] h-[128px] md:w-[200px] md:h-[200px] ml:w-48 ml:h-48 rounded-full overflow-hidden mr-0 mb-8 md:mb-0 md:mr-8">
-                <img
-                    src={profileData.profileImg}
-                    alt="Profile"
-                    className="object-cover w-full h-full"
-                />
+        <>
+            <div className="flex flex-col sm:flex-row justify-center items-center bg-white p-4 text-gray-800">
+                <div className="w-[128px] h-[128px] md:w-[200px] md:h-[200px] ml:w-48 ml:h-48 overflow-hidden mr-0 mb-8 md:mb-0 sm:mr-8">
+                    <img
+                        src={profileData.profileImg}
+                        alt="Profile"
+                        className="object-cover w-full h-full"
+                    />
+                </div>
+                <div className="w-full text-center sm:text-left grow">
+                    <h1 className="text-md sm:text-2xl font-bold mb-4">
+                        {profileData.ko_name}({profileData.en_name})
+                    </h1>
+
+                    <div className="mx-auto max-w-[600px] mb-2 border-b-2 border-gray-500">
+                        Contact & Channels
+                    </div>
+
+                    {profileData.contact.map((contactVal, index) => (
+                        <p
+                            className="text-sm sm:text-md"
+                            key={`profileData_${index}`}
+                        >
+                            <span className="font-bold">
+                                {contactVal.title}:{" "}
+                            </span>
+                            {contactVal.content}
+                        </p>
+                    ))}
+                </div>
             </div>
-            <div className="text-center md:text-left grow">
-                <h1 className="text-md sm:text-2xl font-bold">
-                    {profileData.name}
-                </h1>
-                <p className="text-sm sm:text-md">{profileData.githubUrl}</p>
-                <p className="text-sm sm:text-md">{profileData.email}</p>
-            </div>
-        </div>
+        </>
     );
 };
 
@@ -26,8 +42,11 @@ const Header = () => {
 const PortfolioItem = () => {
     return (
         <>
-            {profileData.portfolioData.map((portfolioData, index) => (
-                <div className="min-w-[100%] my-4 flex flex-col sm:flex-row bg-white text-gray-800 shadow-md rounded-lg overflow-hidden">
+            {portfolioData.map((portfolioData, index) => (
+                <div
+                    className="min-w-[100%] my-4 flex flex-col sm:flex-row bg-white text-gray-800 shadow-md rounded-lg overflow-hidden"
+                    key={`portfolid_${index}`}
+                >
                     <div className="w-full min-h-[150px] sm:w-[25%]">
                         <img
                             src={portfolioData.thumbnail}
@@ -58,9 +77,9 @@ export default function Profile() {
         <>
             <Header />
             <hr className="my-10" />
-            <grid className="flex flex-col ">
+            <div className="flex flex-col ">
                 <PortfolioItem />
-            </grid>
+            </div>
         </>
     );
 }
