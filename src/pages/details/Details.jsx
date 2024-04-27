@@ -4,9 +4,10 @@ import Skillset from "../../components/Details/Skillset";
 import Carrer from "../../components/Details/Career";
 import DetailBar from "../../components/Details/DetailBar";
 import Education from "../../components/Details/Education";
+import Profile from "../../components/Details/profile";
 
 export default function Details() {
-    const [page, setPage] = useState("Strengths");
+    const [page, setPage] = useState("Profile");
 
     const pageLabel = [
         { label: "프로필", value: "Profile" },
@@ -24,6 +25,7 @@ export default function Details() {
                         <DetailBar props={{ pageLabel, page, setPage }} />
                     </div>
                     <div className="bg-white rounded-b-xl shadow-md p-4 sm:p-6 md:p-6 w-full">
+                        {page === "Profile" && <Profile />}
                         {page === "Strengths" && <Strengths />}
                         {page === "SkillSet" && <Skillset />}
                         {page === "Career" && <Carrer />}
