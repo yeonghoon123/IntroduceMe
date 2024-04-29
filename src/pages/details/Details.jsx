@@ -12,7 +12,7 @@ import Skillset from "../../components/Details/Skillset";
 import Carrer from "../../components/Details/Career";
 import DetailBar from "../../components/Details/DetailBar";
 import Education from "../../components/Details/Education";
-import Profile from "../../components/Details/Profile";
+import Profile from "../../components/Details/profile";
 
 export default function Details() {
     const [page, setPage] = useState("Profile");
