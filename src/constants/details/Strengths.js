@@ -1,3 +1,12 @@
+/*
+    ID: RST-c100
+    작성자: 김영훈
+    작성일: 2024.04.28
+    기능: Detail page strengths constants
+    버전: V0.5
+    버전 이력: V0.5
+*/
+
 export const strengthsData = [
     {
         title: "책임감이 강하다",

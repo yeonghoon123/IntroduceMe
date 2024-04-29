@@ -1,3 +1,12 @@
+/*
+    ID: RSK-S100
+    작성자: 김영훈
+    작성일: 2024.04.28
+    기능: Detail page skill set constants
+    버전: V0.5
+    버전 이력: V0.5
+*/
+
 export const skillsetData = [
     {
         skillKind: "프론트앤드",

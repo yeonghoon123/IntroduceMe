@@ -2,6 +2,9 @@ import { educationData } from "../../constants/details/Education";
 export default function Education() {
     return (
         <>
+            <h2 className="text-lg sm:text-xl font-bold text-center text-gray-800  mb-8 md:mb-16">
+                학력
+            </h2>
             {educationData.map((value, index) => (
                 <div key={`education_${index}`}>
                     <div>

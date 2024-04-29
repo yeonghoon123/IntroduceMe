@@ -1,3 +1,12 @@
+/*
+    ID: RR100
+    작성자: 김영훈
+    작성일: 2024.04.28
+    기능: React router setting
+    버전: V0.5
+    버전 이력: V0.5
+*/
+
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Details from "./pages/details/Details";

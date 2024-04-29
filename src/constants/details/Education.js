@@ -1,3 +1,12 @@
+/*
+    ID: RE-e100
+    작성자: 김영훈
+    작성일: 2024.04.28
+    기능: Detail page education constants
+    버전: V0.5
+    버전 이력: V0.5
+*/
+
 export const educationData = [
     {
         schoolName: "한국폴리텍 I 대학 성남캠퍼스",

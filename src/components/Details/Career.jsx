@@ -5,17 +5,26 @@ import { carrerData } from "../../constants/details/Carrer";
 export default function Career() {
     const [tabNum, setTabNum] = useState(0);
     return (
-        <>
+        <div className="mb-10">
+            <h2
+                className={
+                    "text-lg sm:text-xl font-bold text-center text-gray-800  mb-8 md:mb-16"
+                }
+            >
+                경력
+            </h2>
             {carrerData.length > 1 && (
                 <div className="flex flex-row w-full space-x-1 overflow-x-auto scrollbar-hide">
-                    <MultiTab props={{ carrerData, tabNum, setTabNum }} />
+                    <MultiTab
+                        props={{ tabData: [...carrerData], tabNum, setTabNum }}
+                    />
                 </div>
             )}
             <h2
                 className={`${carrerData.length > 1 && "mt-4 md:mt-10"}
-                }text-lg sm:text-xl font-bold text-center text-gray-800  mb-8 md:mb-16`}
+                }text-lg sm:text-xl font-bold text-gray-800  mb-8 md:mb-16`}
             >
-                {carrerData[tabNum].companyName}
+                회사 이름: {carrerData[tabNum].companyName}
             </h2>
             <div>
                 {carrerData[tabNum].project?.map((value, index) => (
@@ -35,6 +44,6 @@ export default function Career() {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     );
 }
