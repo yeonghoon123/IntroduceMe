@@ -17,7 +17,7 @@ const Header = () => {
                         {profileData.ko_name}({profileData.en_name})
                     </h1>
 
-                    <div className="mx-auto max-w-[600px] mb-2 border-b-2 border-gray-500">
+                    <div className="max-w-[600px] mb-2 border-b-2 border-gray-500">
                         Contact & Channels
                     </div>
 
