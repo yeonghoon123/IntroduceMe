@@ -1,3 +1,12 @@
+/*
+    ID: IMD102
+    작성자: 김영훈
+    작성일: 2024.04.28
+    기능: Detail Profile page
+    버전: V0.5
+    버전 이력: V0.5
+*/
+
 import { profileData, portfolioData } from "../../constants/details/Profile";
 
 // 사진과 개인 정보를 표시하는 헤더 컴포넌트
