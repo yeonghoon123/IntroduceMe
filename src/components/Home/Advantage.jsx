@@ -65,12 +65,9 @@ const Advantage = ({ props }) => {
                         </h2>
                         <ul className="list-disc space-y-2 pl-5 text-gray-600">
                             <li>
-                                한국폴리텍 I 대학 성남캠퍼스(전자정보통신과) -
-                                2021.03. ~ 2023.02
+                                한국폴리텍 I 대학 성남캠퍼스(전자정보통신과)
                             </li>
-                            <li>
-                                삼일상업고등학교(IT경영과) - 2018.03. ~ 2021.02
-                            </li>
+                            <li>삼일상업고등학교(IT경영과)</li>
                         </ul>
                         <Link to={"/details"} className="md:mt-auto mt-8">
                             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
