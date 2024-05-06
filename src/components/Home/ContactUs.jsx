@@ -18,7 +18,7 @@ const ContactUs = ({ props }) => {
                 className="min-h-screen flex flex-col items-center justify-center p-8 bg-gray-100"
                 ref={thankYouRef}
             >
-                <div className="flex flex-col w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-12 grow">
+                <div className="flex flex-col max-w-[1180px] w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-12 grow">
                     <h2 className="text-xl font-semibold text-gray-800 mb-8">
                         포트폴리오
                     </h2>
@@ -54,7 +54,7 @@ const ContactUs = ({ props }) => {
                     </ul>
                 </div>
 
-                <div className="flex flex-col w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-12 grow">
+                <div className="flex flex-col max-w-[1180px] w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-12 grow">
                     <h2 className="text-xl font-semibold text-gray-800 mb-8">
                         Contact & Channels
                     </h2>

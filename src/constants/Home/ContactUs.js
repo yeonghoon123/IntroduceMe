@@ -7,7 +7,6 @@
     버전 이력: V0.5
 */
 
-import profileImg from "../../assets/detail/profile.jpg";
 import portfolio1 from "../../assets/portfolio1.jpeg";
 
 export const contactData = [

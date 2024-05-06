@@ -29,17 +29,20 @@ const Advantage = ({ props }) => {
     return (
         <>
             <div
-                className="min-h-screen flex items-center justify-center p-8 bg-gray-200"
+                className="flex flex-row items-center justify-center p-8 bg-gray-100"
                 ref={advantageRef}
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl min-h-128">
-                    <div className="flex flex-col bg-white rounded-lg shadow-md p-6">
+                <div className="flex flex-row max-w-[1180px] w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-12 grow">
+                    <div className="w-[50%] p-8">
                         <h2 className="text-xl font-semibold text-gray-800 mb-8">
                             🏢 경력
                         </h2>
-                        <div className="space-y-4">
+                        <ul className="flex flex-col w-full text-gray-600 flex-wrap">
                             {careerData.map((value, index) => (
-                                <div key={`home_career_${index}`}>
+                                <div
+                                    key={`home_career_${index}`}
+                                    className="w-full p-4"
+                                >
                                     <h3 className="text-lg font-bold">
                                         {value.company}
                                     </h3>
@@ -48,20 +51,19 @@ const Advantage = ({ props }) => {
                                     </p>
                                 </div>
                             ))}
-                        </div>
+                        </ul>
                         {/* <Link to={"/details"} className="md:mt-auto mt-8">
                             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 자세히 보기
                             </button>
                         </Link> */}
                     </div>
-
-                    <div className="flex flex-col bg-white rounded-lg shadow-md p-6">
+                    <div className="w-[50%] p-8">
                         <h2 className="text-xl font-semibold text-gray-800 mb-8">
-                            🏫 학력
+                            학력
                         </h2>
-                        <ul className="list-disc space-y-2 pl-5 text-gray-600">
-                            <li>
+                        <ul className="flex flex-col w-full text-gray-600 flex-wrap">
+                            <li className="mb-4">
                                 한국폴리텍 I 대학 성남캠퍼스(전자정보통신과)
                             </li>
                             <li>삼일상업고등학교(IT경영과)</li>

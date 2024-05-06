@@ -62,7 +62,7 @@ const Personality = ({ props }) => {
                 className="min-h-screen flex flex-col items-center justify-center p-8 bg-gray-100"
                 ref={personalityRef}
             >
-                <div className="flex flex-col w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-12 grow">
+                <div className="flex flex-col max-w-[1180px] w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-16 grow">
                     <h2 className="text-xl font-semibold text-gray-800 mb-8">
                         저의 장점을 소개합니다.
                     </h2>
@@ -82,7 +82,7 @@ const Personality = ({ props }) => {
                     </ul>
                 </div>
 
-                <div className="flex flex-col w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-12 grow">
+                <div className="flex flex-col max-w-[1180px] w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 grow">
                     <h2 className="text-xl font-semibold text-gray-800 mb-8">
                         제가 잘하는 기술을 소개합니다.
                     </h2>
