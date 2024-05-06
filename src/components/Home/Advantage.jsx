@@ -11,6 +11,21 @@ import { Link } from "react-router-dom";
 const Advantage = ({ props }) => {
     const { advantageRef } = props;
 
+    const careerData = [
+        {
+            company: "Narasoft",
+            duration: "2019.03 ~ 2020.03 - 학습 근로자(도제학교)",
+        },
+        {
+            company: "Jober",
+            duration: "2020.03 ~ 2021.01 - 학습 근로자(도제학교)",
+        },
+        {
+            company: "SoyNet",
+            duration: "2021.02.15 - 현재",
+        },
+    ];
+
     return (
         <>
             <div
@@ -23,40 +38,22 @@ const Advantage = ({ props }) => {
                             🏢 경력
                         </h2>
                         <div className="space-y-4">
-                            <div>
-                                <h3 className="text-lg font-bold">SoyNet</h3>
-                                <p className="text-gray-600">
-                                    2021.02.15 - 현재
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-bold">SoyNature</h3>
-                                <p className="text-gray-600">
-                                    MLOps 시스템 개발 및 운영 총괄
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-bold">
-                                    Marketplace
-                                </h3>
-                                <p className="text-gray-600">
-                                    Marketplace 홈페이지 개발 및 운영
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="text-lg font-bold">
-                                    SoyStudy Untact CBT
-                                </h3>
-                                <p className="text-gray-600">
-                                    홈페이지 개발 및 운영
-                                </p>
-                            </div>
+                            {careerData.map((value, index) => (
+                                <div key={`home_career_${index}`}>
+                                    <h3 className="text-lg font-bold">
+                                        {value.company}
+                                    </h3>
+                                    <p className="text-gray-600">
+                                        {value.duration}
+                                    </p>
+                                </div>
+                            ))}
                         </div>
-                        <Link to={"/details"} className="md:mt-auto mt-8">
+                        {/* <Link to={"/details"} className="md:mt-auto mt-8">
                             <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                 자세히 보기
                             </button>
-                        </Link>
+                        </Link> */}
                     </div>
 
                     <div className="flex flex-col bg-white rounded-lg shadow-md p-6">
@@ -69,11 +66,6 @@ const Advantage = ({ props }) => {
                             </li>
                             <li>삼일상업고등학교(IT경영과)</li>
                         </ul>
-                        <Link to={"/details"} className="md:mt-auto mt-8">
-                            <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                                자세히 보기
-                            </button>
-                        </Link>
                     </div>
                 </div>
             </div>

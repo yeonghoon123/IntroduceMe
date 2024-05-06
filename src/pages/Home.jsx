@@ -10,15 +10,13 @@
 import React, { useState, useRef, useEffect } from "react"; // React, React Hook 사용
 import gsap from "gsap"; // gsap 애니메이션 라이브러리 사용
 import Intro from "../components/Home/Intro";
-import IntroduceMe from "../components/Home/IntroduceMe";
 import Personality from "../components/Home/Personality";
 import Advantage from "../components/Home/Advantage";
-import ThankYou from "../components/Home/ThankYou";
+import ContactUs from "../components/Home/ContactUs";
 
 const Home = () => {
     const introRef = useRef(null); // 인트로 Ref
     const personalityRef = useRef(null); // 간단소개 Ref
-    const introduceMeRef = useRef(null); // 나의 설명 Ref
     const advantageRef = useRef(null); // 경력, 학력 Ref
     const thankYouRef = useRef(null); // 감사 인사말 Ref
 
@@ -26,7 +24,6 @@ const Home = () => {
     const [animationState, setAnimationState] = useState({
         intro: false,
         personality: false,
-        introduceMe: false,
         advantage: false,
         thankYou: false,
     });
@@ -60,7 +57,6 @@ const Home = () => {
         // 스크롤시 발생하는 이벤트
         const handleScroll = () => {
             checkAndAnimate(introRef, "intro");
-            checkAndAnimate(introduceMeRef, "introduceMe");
             checkAndAnimate(personalityRef, "personality");
             checkAndAnimate(advantageRef, "advantage");
             checkAndAnimate(thankYouRef, "thankYou");
@@ -77,10 +73,9 @@ const Home = () => {
     return (
         <div className="bg-gray-100">
             <Intro props={{ introRef }} />
-            <IntroduceMe props={{ introduceMeRef }} />
             <Personality props={{ personalityRef }} />
             <Advantage props={{ advantageRef }} />
-            <ThankYou props={{ thankYouRef }} />
+            <ContactUs props={{ thankYouRef }} />
         </div>
     );
 };
