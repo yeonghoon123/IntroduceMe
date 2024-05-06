@@ -9,7 +9,7 @@
 
 import { useState } from "react";
 import MultiTab from "../common/MultiTab";
-import { carrerData } from "../../constants/details/Carrer";
+import { carrerData } from "../../constants/Details/Carrer";
 
 export default function Career() {
     const [tabNum, setTabNum] = useState(0);
