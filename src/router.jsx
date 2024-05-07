@@ -9,6 +9,7 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
+import Carrers from "./pages/Carrers/Carrers";
 
 // 스크롤을 맨 위로 이동시키는 미들웨어 함수
 function scrollToTop() {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
+        loader: scrollToTop(),
+    },
+    {
+        path: "/carrers",
+        element: <Carrers />,
         loader: scrollToTop(),
     },
 ]);

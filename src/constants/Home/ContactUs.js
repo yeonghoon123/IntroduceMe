@@ -14,10 +14,10 @@ export const contactData = [
         title: "Email",
         content: "dudgns020904@gmail.com",
     },
-    {
-        title: "Phone",
-        content: "010-2721-1059",
-    },
+    // {
+    //     title: "Phone",
+    //     content: "010-2721-1059",
+    // },
     {
         title: "Github",
         content: "https://github.com/yeonghoon123",

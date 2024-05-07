@@ -7,24 +7,10 @@
     버전 이력: V0.5
 */
 import { Link } from "react-router-dom";
+import { carrerData } from "../../constants/Home/Advatage";
 
 const Advantage = ({ props }) => {
     const { advantageRef } = props;
-
-    const careerData = [
-        {
-            company: "Narasoft",
-            duration: "2019.03 ~ 2020.03 - 학습 근로자(도제학교)",
-        },
-        {
-            company: "Jober",
-            duration: "2020.03 ~ 2021.01 - 학습 근로자(도제학교)",
-        },
-        {
-            company: "SoyNet",
-            duration: "2021.02.15 - 현재",
-        },
-    ];
 
     return (
         <>
@@ -35,12 +21,12 @@ const Advantage = ({ props }) => {
                 <div className="flex flex-row max-w-[1180px] w-full min-h-[50%] bg-white rounded-lg shadow-md p-6 mb-12 grow">
                     <div className="w-[50%] p-8">
                         <h2 className="text-xl font-semibold text-gray-800 mb-8">
-                            🏢 경력
+                            경력
                         </h2>
                         <ul className="flex flex-col w-full text-gray-600 flex-wrap">
-                            {careerData.map((value, index) => (
+                            {carrerData.map((value, index) => (
                                 <div
-                                    key={`home_career_${index}`}
+                                    key={`home_carrer_${index}`}
                                     className="w-full p-4"
                                 >
                                     <h3 className="text-lg font-bold">
@@ -52,11 +38,11 @@ const Advantage = ({ props }) => {
                                 </div>
                             ))}
                         </ul>
-                        {/* <Link to={"/details"} className="md:mt-auto mt-8">
-                            <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                                자세히 보기
+                        <Link to={"/carrers"}>
+                            <button className="mt-12 bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                경력 자세히 보기
                             </button>
-                        </Link> */}
+                        </Link>
                     </div>
                     <div className="w-[50%] p-8">
                         <h2 className="text-xl font-semibold text-gray-800 mb-8">
