@@ -26,6 +26,7 @@ const WorkExperience = () => {
                         </p>
                         <p className="text-[14px]">{value.position}</p>
                         <p className="text-[14px]">{value.duration}</p>
+                        <p className="text-[14px]">({value.totalYear})</p>
                     </div>
                     <div className="w-full">
                         <ul className="list-disc ">

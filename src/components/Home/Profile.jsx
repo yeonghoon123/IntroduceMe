@@ -39,7 +39,7 @@ const Profile = () => {
                                     className="text-[14px]"
                                     key={`intro_${index}`}
                                 >
-                                    <span className="font-bold">{value}</span>
+                                    <span className="font-bold">{value}: </span>
                                     {profile_data.contat_channel_content[index]}
                                 </p>
                             )
